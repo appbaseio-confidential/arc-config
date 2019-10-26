@@ -1,6 +1,6 @@
 <?php
-    $filePath = "/Users/lakhansamani/Sites/arc/env.sample";
-    // $filePath = "/etc/systemd/system/arc.env";
+    // $filePath = "/Users/lakhansamani/Sites/arc/env.sample";
+    $filePath = "/etc/systemd/system/arc.env";
     function getEnvVars() {
         global $filePath;
         
