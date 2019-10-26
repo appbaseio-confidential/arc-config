@@ -2,12 +2,12 @@
     <div class="logo-container">
         <img src="./images/arc.svg" alt="logo"/>
     </div>
-    <h2 class="centered-text">Login</h2>
-    <p class="centered-text">Configure your Arc instance environment variables.</p>
+    <h2 class="centered-text">Login to configure Arc environment</h2>
     <form method="post" action="post-login.php" class="pure-form pure-form-stacked">
-        <input class="pure-input-1" name="username" id="username" type="text" placeholder="Username" />
-        <input class="pure-input-1" name="password" id="password" type="password" placeholder="Password" />
-        <input type="hidden" value="login" />
+        <label for="username">Username</label>
+        <input required class="pure-input-1" name="username" id="username" type="text" placeholder="Username" />
+        <label for="password">Password</label>
+        <input required class="pure-input-1" name="password" id="password" type="password" placeholder="Password" />
         <button type="submit" class="pure-button pure-button-primary">Login</button>
     </form>
     <br />
