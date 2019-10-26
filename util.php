@@ -25,17 +25,14 @@
 
         $fileContent = "";
         foreach ($finalData as $key => $value) {
-            if (!empty(trim($value))) {
+            $trimValue = trim($value);
+            if (!empty($trimValue)) {
                 $fileContent = $fileContent.$key."=".$value."\n";
             }
         }
         global $filePath;
         $file = fopen($filePath, "w") or die("Unable to open file!");
         fwrite($file, $fileContent);
-    }
-
-    function restartService() {
-        return shell_exec("sudo systemctl restart arc"); 
     }
 
     function checkAuth() {
