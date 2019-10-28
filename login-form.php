@@ -12,7 +12,22 @@
     </form>
     <br />
 </div>
-
+<br/>
+<div class="app-banner app-info">
+    <small>
+        Your Arc URL: <a id="app-url"></a>. Use this URL along with the username / password you have configured as Basic Auth credentials to access your ElasticSearch instance.
+    </small>
+    <br /> <br />
+    <small>
+        Visit <a href="https://arc-dashboard.appbase.io/">Arc Dashboard.</a>
+        <br />
+        Your <a href="https://arc-dashboard.appbase.io/">Arc Dashboard</a> lets you configure additional security rules, view analytics and provides a better development experience for your ElasticSearch.
+    </small>
+    <br/> <br />
+    <small>
+    <b>Note:</b> Until you have configured TLS for Arc, you will need to allow loading of unsafe scripts (<a href="https://i.imgur.com/G4eLUsa.png">example</a>) from your browser to connect to the Arc instance. We strongly recommend you to configure this.
+    </small>
+</div>
 <br />
 <div class="app-banner app-info">
     <small><b>Forgot Password ?</b></small>

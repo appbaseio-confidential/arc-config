@@ -33,4 +33,13 @@
         setBanner("<?= $_GET["success"]?>", "success");
     </script>
 <?php endif; ?>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var urlElement = document.getElementById('app-url');
+        if (urlElement) {
+            urlElement.href= window.origin;
+            urlElement.innerHTML = window.location.origin;
+        }
+    });
+</script>
 <?php include "footer.php"; ?>
