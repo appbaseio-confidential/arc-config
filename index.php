@@ -40,6 +40,10 @@
             urlElement.href= window.origin;
             urlElement.innerHTML = window.location.origin;
         }
+        var appDashboardUrlElement = document.getElementById('app-dashboard-url');
+        if (appDashboardUrlElement) {
+            appDashboardUrlElement.href = 'https://arc-dashboard.appbase.io?url='+window.location.origin;
+        }
     });
 </script>
 <?php include "footer.php"; ?>

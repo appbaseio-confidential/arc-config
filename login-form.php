@@ -19,9 +19,7 @@
     </small>
     <br /> <br />
     <small>
-        Visit <a href="https://arc-dashboard.appbase.io/">Arc Dashboard.</a>
-        <br />
-        Your <a href="https://arc-dashboard.appbase.io/">Arc Dashboard</a> lets you configure additional security rules, view analytics and provides a better development experience for your ElasticSearch.
+        Visit <a id="app-dashboard-url">Arc Dashboard.</a> It lets you configure additional security rules, view analytics and provides a better development experience for your ElasticSearch.
     </small>
     <br/> <br />
     <small>
