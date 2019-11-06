@@ -37,12 +37,20 @@
     document.addEventListener("DOMContentLoaded", function(event) {
         var urlElement = document.getElementById('app-url');
         if (urlElement) {
-            urlElement.href= window.origin;
-            urlElement.innerHTML = window.location.origin;
+            var url = window.location.origin
+            if (window.location.port) {
+                var url = window.location.protocol + "//" + window.location.hostname + ":8000"    
+            }
+            urlElement.href= url;
+            urlElement.innerHTML = url;
         }
         var appDashboardUrlElement = document.getElementById('app-dashboard-url');
         if (appDashboardUrlElement) {
-            appDashboardUrlElement.href = 'https://arc-dashboard.appbase.io?url='+window.location.origin;
+            var url = window.location.origin
+            if (window.location.port) {
+                var url = window.location.protocol + "//" + window.location.hostname + ":8000"    
+            }
+            appDashboardUrlElement.href = 'https://arc-dashboard.appbase.io?url='+url;
         }
     });
 </script>

@@ -31,18 +31,18 @@
     <small><b>Forgot Password ?</b></small>
     <br/>
     <small>
-        - Connect to your EC2 instance using <code>ssh</code>:
+        - Exec into arc docker container:
         <br />
         <code>
-            ssh -i "test.pem" ec2-user@ec2-3-2-3-1.compute-1.amazonaws.com
+            docker exec -it arc /bin/sh
         </code>
     </small>
     <br/><br/>
     <small>
-        - Run following command to display your credentials:
+        - Run following command to view your credentials:
         <br />
         <code>
-            cat /etc/systemd/system/arc.env
+            cat /arc-data/.env
         </code>
     </small>
 </div>
