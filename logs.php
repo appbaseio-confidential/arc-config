@@ -9,7 +9,11 @@ $envs = getEnvVars();
 <div class="sidebar-content">
 <div class="app-card">
     <?php
-    $output = shell_exec('head -n 100 ./logs.sample');
+//    for production
+//    TODO: replace container_name with https://github.com/appbaseio/arc-dockerized/blob/master/docker-compose.yaml#L15
+    $output = shell_exec('docker logs [container_name] | sort -r | head -100');
+//    if you are on local
+//    $output = shell_exec('head -n 100 ./logs.sample');
     ?>
 
     <code>
