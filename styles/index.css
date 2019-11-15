@@ -6,9 +6,6 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 
 .app-card {
@@ -17,13 +14,13 @@ body {
   padding: 20px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.02), 0 5px 22px -8px rgba(0, 0, 0, 0.1);
   display: block;
-  width: 33.33%;
+  width: 70%;
 }
 
 .app-banner {
   padding: 20px;
   border-radius: 4px;
-  width: 33.33%;
+  width: 70%;
 }
 
 .app-info {
@@ -74,3 +71,9 @@ body {
 .pure-input-1 {
   margin-bottom: 25px !important;
 }
+
+.sidebar-content {
+  flex: 1 0 auto;
+  width: 100%;
+}
+

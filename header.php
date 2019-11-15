@@ -14,4 +14,3 @@
     </head>
     <body>
         <div class="app-container">
-            <div id="notifier" class="flex-centered"></div>
