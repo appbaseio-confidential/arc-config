@@ -17,6 +17,6 @@ $envs = getEnvVars();
     ?>
 
     <code>
-        <?php echo $output; ?>
+        <pre><?php echo $output; ?></pre>
     </code></div>
 </div>
