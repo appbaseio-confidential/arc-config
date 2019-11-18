@@ -12,8 +12,8 @@ $envs = getEnvVars();
         <img src="./images/arc.svg" alt="logo"/>
     </div>
     <h2 class="centered-text">Arc Logs</h2>
-    <div class="logs-content">
-        <div class="icon"><i onclick="reloadPage()" style="font-size:24px" class="fa">&#xf021;</i></div>
+    <div id="logs" class="logs-content">
+        <div class="icon"><i onclick="reloadLogsContent()" style="font-size:24px" class="fa">&#xf021;</i></div>
     <?php
 //    for production
 //    TODO: replace container_name with https://github.com/appbaseio/arc-dockerized/blob/master/docker-compose.yaml#L15
@@ -28,7 +28,10 @@ $envs = getEnvVars();
 </div>
 </div>
 <script>
-    function reloadPage() {
-        window.location.reload()
+    function reloadLogsContent() {
+        $('#logs').load(document.getElementById("logs"));
     }
+    setTimeout(function(){
+        reloadLogsContent();
+    }, 5000);
 </script>
