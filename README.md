@@ -1,6 +1,6 @@
-#Arc: Config setup
+# Arc: Config setup
 
-##Install Apache
+## Install Apache
 https://getgrav.org/blog/macos-catalina-apache-multiple-php-versions
 
 Follow the below sections from the above blog:
@@ -9,7 +9,7 @@ Follow the below sections from the above blog:
 - Apache Configuration
 - PHP Installation
 
-##Configure (mandatory)
+## Configure (mandatory)
 You can create `env.sample` at the root of your project with the following content or if you have any:
 ```dotenv
 USERNAME=admin
@@ -21,26 +21,26 @@ Now in `util.php` change the `$filePath` to `./env.sample`.
 
 > Make sure not to commit this change
 
-##Starting services
+## Starting services
 After following above guide, make sure the services are started. In case not, try below commands. Make sure no process is running on port `8080`.
 To kill all process on `8080`, run this command:
 ```shell script
 kill -9 $(lsof -t -i:8080)
 ```
 
-###Starting httpd
+### Starting httpd
 ```shell script
 brew services start httpd
 ```
 
-###Starting apache server
+### Starting apache server
 ```shell script
 sudo apachectl -k restart
 ```
 
 Once the above steps are done, you will have your server running at http://localhost:8080
 
-##Configuring for arc-dashboard
+## Configuring for arc-dashboard
 If you are running Cluster locally, then you need to configure the `credentials` and `ElasticSearch URL`.
 
 First make sure to allow `insecure-host` in browser: 
