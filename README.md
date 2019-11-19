@@ -44,8 +44,9 @@ Once the above steps are done, you will have your server running at http://local
 If you are running Cluster locally, then you need to configure the `credentials` and `ElasticSearch URL`.
 
 First make sure to allow `insecure-host` in browser: 
-- [Chrome](chrome://flags/#allow-insecure-localhost)
-- [Brave](brave://flags/#allow-insecure-localhost)
+
+- Chrome - chrome://flags/#allow-insecure-localhost
+- Brave - brave://flags/#allow-insecure-localhost
 
 Now go to https://localhost and enter your `ElasticSearch URL` and `ARC ID`. If you don't have one you can try this:
 - ElasticSearch URL: https://search-arc-tester-f6qku5j7i5lnqogzbibj336mgy.us-east-1.es.amazonaws.com/
