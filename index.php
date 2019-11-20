@@ -10,8 +10,6 @@
     include "header.php";
 ?>
 
-<div class="sidebar-content">
-    <div id="login-form">
 <?php
     // show login if username and password are set
     if (!empty($username) && !empty($password)) {
@@ -35,8 +33,6 @@
         setBanner("<?= $_GET["success"]?>", "success");
     </script>
 <?php endif; ?>
-    </div>
-</div>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         var urlElement = document.getElementById('app-url');
