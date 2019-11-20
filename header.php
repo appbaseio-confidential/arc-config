@@ -14,4 +14,5 @@
         <script type='text/javascript' src='./js/index.js'></script>
     </head>
     <body>
+        <div id="notifier"></div>
         <div class="app-container">
