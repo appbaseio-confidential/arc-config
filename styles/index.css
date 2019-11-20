@@ -78,6 +78,10 @@ body {
 .logs-content {
   background: #000000a8;
   color: #f8fafc;
+  padding: 10px;
+  border-radius: 3px;
+  max-height: 500px;
+  overflow: auto;
 }
 
 .icon {
@@ -85,4 +89,5 @@ body {
   justify-content: flex-end;
   padding-right: 5px;
   cursor: pointer;
+  margin-bottom: 5px;
 }

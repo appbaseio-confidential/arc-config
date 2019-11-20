@@ -1,40 +1,28 @@
 FROM php:7.2-fpm
 
-# Set working directory
-WORKDIR /var/www
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
-    build-essential \
-    libpng-dev \
-    libjpeg62-turbo-dev \
-    libfreetype6-dev \
-    locales \
-    zip \
-    jpegoptim optipng pngquant gifsicle \
-    vim \
-    unzip \
-    git \
-    curl
+    curl \
+    apt-transport-https \
+    ca-certificates \
+    gnupg2 \
+    software-properties-common && curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg > /tmp/dkey; apt-key add /tmp/dkey && \
+    add-apt-repository \
+    "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
+    $(lsb_release -cs) \
+    stable" && \
+    apt-get update && \
+    apt-get -y install docker-ce && apt-get clean && rm -rf /var/lib/apt/lists/* && groupadd -g 1000 www && useradd -u 1000 -ms /bin/bash -g www www
 
-# Clear cache
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# Install extensions
-RUN docker-php-ext-install mbstring zip exif pcntl
-RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/
-RUN docker-php-ext-install gd
-
-# Add user for laravel application
-RUN groupadd -g 1000 www
-RUN useradd -u 1000 -ms /bin/bash -g www www
+# Set working directory
+WORKDIR /var/www
 
 # Copy existing application directory contents
 COPY . /var/www/html
-COPY ./watcher.sh /
-RUN rm /var/www/html/watcher.sh && mkdir /arc-data && chmod +x /watcher.sh && nohup sh -x /watcher.sh &
+RUN mkdir /arc-data && chmod +x /var/www/html/*.sh
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
-CMD ["php-fpm"]
+CMD ["sh", "-c", "/var/www/html/starter.sh"]
 

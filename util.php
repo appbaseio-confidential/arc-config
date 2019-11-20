@@ -1,6 +1,6 @@
 <?php
     // env file path for local
-//     $filePath = "./env.sample";
+    // $filePath = "env.sample";
     
     // env file path for AMI
     // $filePath = "/etc/systemd/system/arc.env";
