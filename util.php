@@ -1,6 +1,13 @@
 <?php
-    // $filePath = "/Users/lakhansamani/Sites/arc/env.sample";
-    $filePath = "/etc/systemd/system/arc.env";
+    // env file path for local
+    // $filePath = "env.sample";
+    
+    // env file path for AMI
+    // $filePath = "/etc/systemd/system/arc.env";
+    
+    // env file path for docker images
+    $filePath = "/arc-data/.env";
+
     function getEnvVars() {
         global $filePath;
         

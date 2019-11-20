@@ -5,6 +5,8 @@
     $envs = getEnvVars();
 ?>
 <?php include "header.php"; ?>
+<?php include "sidebar.php"; ?>
+<div class="sidebar-content">
 <div class="app-card">
     <div class="logo-container">
         <img src="./images/arc.svg" alt="logo"/>
@@ -39,3 +41,4 @@
         </script>
     <?php endif; ?>
 <?php include "footer.php"; ?>
+</div>
