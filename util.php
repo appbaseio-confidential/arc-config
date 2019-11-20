@@ -3,10 +3,10 @@
     // $filePath = "env.sample";
     
     // env file path for AMI
-    // $filePath = "/etc/systemd/system/arc.env";
+    $filePath = "/etc/systemd/system/arc.env";
     
     // env file path for docker images
-    $filePath = "/arc-data/.env";
+    // $filePath = "/arc-data/.env";
 
     function getEnvVars() {
         global $filePath;
