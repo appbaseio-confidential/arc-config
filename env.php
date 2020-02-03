@@ -16,19 +16,21 @@
         <label for="username">Master Username</label>
         <small>This will reset your admin username</small>
         <input required class="pure-input-1" name="username" id="username" type="text" placeholder="Username" value="<?=$envs["USERNAME"]?>" />
-        
+
         <label for="username">Master Password</label>
         <small>This will reset your admin password</small>
         <input required class="pure-input-1" name="password" id="password" type="password" placeholder="Password" value="<?=$envs["PASSWORD"]?>"/>
-        
+
         <label for="cluster_url">ElasticSearch URL</label>
         <small>URL format: https://your-search-domain.com:port. If your URL is protected by basic-auth use the format https://search-credentials@your-search-domain.com:port</small>
         <input required name="cluster_url" type="text" placeholder="Cluster URL" class="pure-input-1" value="<?=$envs["ES_CLUSTER_URL"]?>"/>
-        
+
         <label for="arc_id">ARC ID</label>
         <small>You can obtain your ARC Id by visiting <a href="https://arc-dashboard.appbase.io/install" target="_blank">https://arc-dashboard.appbase.io/install</a></small>
         <input required name="arc_id" type="text" placeholder="Arc ID" class="pure-input-1" value="<?=$envs["ARC_ID"]?>"/>
-        
+        <input required name="open_faas_gateway" type="text" placeholder="Open FAAS Gateway" class="pure-input-1" value="<?=$envs["OPENFAAS_GATEWAY"]?>"/>
+        <input required name="open_faas_kube_config" type="text" placeholder="Open FAAS Kubernetes Config" class="pure-input-1" value="<?=$envs["OPENFAAS_KUBE_CONFIG"]?>"/>
+
         <button class="pure-button pure-button-primary">Save</button>
     </form>
     <form method="post" action="post-logout.php" class="flex-centered">
