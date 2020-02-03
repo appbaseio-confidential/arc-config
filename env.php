@@ -31,11 +31,11 @@
 
         <label for="open_faas_gateway">OpenFaas Gateway</label>
         <small>You can obtain your OpenFaas Gateway by following docs <a href="https://docs.appbase.io/docs/search/Functions/hosting#5-configure-appbase" target="_blank">here</a></small>
-        <input name="open_faas_gateway" type="text" placeholder="Open FAAS Gateway" class="pure-input-1" value="<?=$envs["OPENFAAS_GATEWAY"]?>"/>
+        <input name="open_faas_gateway" type="text" placeholder="OpenFaas Gateway URL" class="pure-input-1" value="<?=$envs["OPENFAAS_GATEWAY"]?>"/>
 
         <label for="open_faas_kube_config">Kube Config Path</label>
         <small>Enter KubeConfig file path where OpenFaas is deployed, for more information you can read docs <a href="https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/" target="_blank">here</a></small>
-        <input name="open_faas_kube_config" type="text" placeholder="Open FAAS Kubernetes Config" class="pure-input-1" value="<?=$envs["OPENFAAS_KUBE_CONFIG"]?>"/>
+        <input name="open_faas_kube_config" type="text" placeholder="KubeConfig file path" class="pure-input-1" value="<?=$envs["OPENFAAS_KUBE_CONFIG"]?>"/>
 
         <button class="pure-button pure-button-primary">Save</button>
     </form>
