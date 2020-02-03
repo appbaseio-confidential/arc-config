@@ -28,8 +28,14 @@
         <label for="arc_id">ARC ID</label>
         <small>You can obtain your ARC Id by visiting <a href="https://arc-dashboard.appbase.io/install" target="_blank">https://arc-dashboard.appbase.io/install</a></small>
         <input required name="arc_id" type="text" placeholder="Arc ID" class="pure-input-1" value="<?=$envs["ARC_ID"]?>"/>
-        <input required name="open_faas_gateway" type="text" placeholder="Open FAAS Gateway" class="pure-input-1" value="<?=$envs["OPENFAAS_GATEWAY"]?>"/>
-        <input required name="open_faas_kube_config" type="text" placeholder="Open FAAS Kubernetes Config" class="pure-input-1" value="<?=$envs["OPENFAAS_KUBE_CONFIG"]?>"/>
+
+        <label for="arc_id">OPEN FAAS Gateway</label>
+        <small>You can obtain your Open FAAS Gateway by following <a href="https://docs.appbase.io/docs/search/Functions/hosting#5-configure-appbase" target="_blank">https://docs.appbase.io/docs/search/Functions/hosting#5-configure-appbase</a></small>
+        <input name="open_faas_gateway" type="text" placeholder="Open FAAS Gateway" class="pure-input-1" value="<?=$envs["OPENFAAS_GATEWAY"]?>"/>
+
+        <label for="arc_id">OPEN FAAS Kubernetes ENV</label>
+        <small>You can obtain your Kubernetes environment variable by following <a href="https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/" target="_blank">https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/</a></small>
+        <input name="open_faas_kube_config" type="text" placeholder="Open FAAS Kubernetes Config" class="pure-input-1" value="<?=$envs["OPENFAAS_KUBE_CONFIG"]?>"/>
 
         <button class="pure-button pure-button-primary">Save</button>
     </form>
