@@ -8,10 +8,10 @@
 	$tdBitConf = "/etc/td-agent-bit/td-agent-bit.conf";
 
 	// env file path for local
-	$filePath = "env.sample";
+	// $filePath = "env.sample";
 	
 	// env file path for AMI
-	// $filePath = "/etc/systemd/system/arc.env";
+	$filePath = "/etc/systemd/system/arc.env";
 	
 	// env file path for docker images
 	// $filePath = "/arc-data/.env";
