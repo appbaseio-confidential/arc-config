@@ -15,6 +15,13 @@
 <br/>
 <div class="app-banner app-info">
     <small>
+        <b>Are you logging in for the first time?</b>
+        <br />
+        Your initial username is <b>ec2-user</b> and your initial password is same as your instance id (<a href="https://i.imgur.com/uWSNOgz.png" target="_blank">example</a>).
+    </small>
+</div>
+<div class="app-banner app-info">
+    <small>
         Your Arc URL: <a id="app-url"></a>. Use this URL along with the username / password you have configured as Basic Auth credentials to access your ElasticSearch instance.
     </small>
     <br /> <br />
@@ -31,18 +38,18 @@
     <small><b>Forgot Password ?</b></small>
     <br/>
     <small>
-        - Exec into arc docker container:
+        - Connect to your EC2 instance using <code>ssh</code>:
         <br />
         <code>
-            docker exec -it arc /bin/sh
+            ssh -i "test.pem" ec2-user@ec2-3-2-3-1.compute-1.amazonaws.com
         </code>
     </small>
     <br/><br/>
     <small>
-        - Run following command to view your credentials:
+        - Run following command to display your credentials:
         <br />
         <code>
-            cat /arc-data/.env
+            cat /etc/systemd/system/arc.env
         </code>
     </small>
 </div>

@@ -11,6 +11,7 @@
         $data["OPENFAAS_KUBE_CONFIG"] = $_POST["open_faas_kube_config"];
         if (isset($_POST["username"]) && isset($_POST["password"]) && isset($_POST["cluster_url"]) && isset($_POST["arc_id"]) && !empty($_POST["username"]) && !empty($_POST["username"]) && !empty($_POST["cluster_url"]) && !empty($_POST["arc_id"])) {
             upsertEnvVars($data);
+            upsertLogFile($data);
             logout("?success=Data updated successfully");
         } else {
             header("Location: env.php?error=Invalid parameters");
