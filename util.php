@@ -101,7 +101,12 @@
 		$url = $data["ES_CLUSTER_URL"];
 		if (isset($url) && $url != "") {
 			$contents = file_get_contents($logPath);
-			[$host, $port, $tls, $username, $password] = splitURL($url);
+			$splitRes = splitURL($url);
+			$host = $splitRes[0];
+			$port = $splitRes[1];
+			$tls = $splitRes[2];
+			$username = $splitRes[3];
+			$password = $splitRes[4];
 			$contents = str_replace('__ES_URL__', $host, $contents);
 			$contents = str_replace('__ES_PORT__', $port, $contents);
 			$contents = str_replace('__ES_TLS__', $tls, $contents);
