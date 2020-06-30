@@ -8,6 +8,7 @@
             $data["PASSWORD"] = $_SESSION["password"] = $_POST["password"];
             $_SESSION["EXPIRES"] = time();
             upsertEnvVars($data);
+            upsertLogFile($data);
             header("Location: env.php");
         } else {
             header("Location: index.php?error=Invalid username or password");

@@ -3,3 +3,4 @@
 env.sample
 logs.sample
 .idea
+td-agent-bit.conf
