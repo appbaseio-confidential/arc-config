@@ -3,6 +3,10 @@
     include "util.php";
     checkAuth();
     $envs = getEnvVars();
+    $sniffing = "";
+    if (isset($envs["SET_SNIFFING"]) && $envs["SET_SNIFFING"] == "true" ) {
+        $sniffing = "true";
+    }
 ?>
 <?php include "header.php"; ?>
 <?php include "sidebar.php"; ?>
@@ -24,6 +28,11 @@
         <label for="cluster_url">ElasticSearch URL</label>
         <small>URL format: https://your-search-domain.com:port. If your URL is protected by basic-auth use the format https://search-credentials@your-search-domain.com:port</small>
         <input required name="cluster_url" type="text" placeholder="Cluster URL" class="pure-input-1" value="<?=$envs["ES_CLUSTER_URL"]?>"/>
+
+        <small>This is helpful in multi node cluster setup. It helps in making request across multiple nodes</small>
+        <div style="margin-bottom:30px;">
+            <input name="set_sniffing" id="set_sniffing" type="checkbox" value="<?=$sniffing?>" /> <label for="set_sniffing" style="display:inline;">Set Sniffing</label>
+        </div>
 
         <label for="arc_id">ARC ID</label>
         <small>You can obtain your ARC Id by visiting <a href="https://arc-dashboard.appbase.io/install" target="_blank">https://arc-dashboard.appbase.io/install</a></small>

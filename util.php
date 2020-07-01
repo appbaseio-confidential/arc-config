@@ -5,7 +5,10 @@
 	// $tdBitConf = "td-agent-bit.conf";
 
 	// logPath for ami
-	$tdBitConf = "/etc/td-agent-bit/td-agent-bit.conf";
+	// $tdBitConf = "/etc/td-agent-bit/td-agent-bit.conf";
+
+	// logPath for docker
+	$tdBitConf = "/arc-data/td-agent-bit.conf";
 
 	// env file path for local
 	// $filePath = "env.sample";
@@ -137,13 +140,10 @@
 
 	function logout($data="") {
 		unset($_SESSION["username"]);
-		unset($_SESSION["password"]);
-		unset($_SESSION["EXPIRES"]);
-		ini_set('session.gc_max_lifetime', 0);
-		ini_set('session.gc_probability', 1);
-		ini_set('session.gc_divisor', 1);
-		session_destroy();
-		session_unset();
-		header("Location: index.php".$data);
+        unset($_SESSION["password"]);
+        unset($_SESSION["EXPIRES"]);
+        session_destroy();
+        session_unset();
+        header("Location: index.php".$data);
 	}
 ?>
