@@ -1,5 +1,5 @@
 <?php
-	$output = shell_exec('journalctl --unit=arc.service -n 100 | tac');
+	$output = shell_exec('tail /arc-data/.logs');
 ?>
 <code>
 	<pre><?php echo $output ?></pre>

@@ -31,7 +31,12 @@
 
         <small>This is helpful in multi node cluster setup. It helps in making request across multiple nodes</small>
         <div style="margin-bottom:30px;">
-            <input name="set_sniffing" id="set_sniffing" type="checkbox" value="<?=$sniffing?>" /> <label for="set_sniffing" style="display:inline;">Set Sniffing</label>
+            <?php if ($sniffing == "true") { ?>
+                <input name="set_sniffing" id="set_sniffing" type="checkbox" value="<?=$sniffing?>" checked="<?$sniffing?>"/>
+            <?php } else { ?>
+                <input name="set_sniffing" id="set_sniffing" type="checkbox" value="<?=$sniffing?>" />
+            <?php  } ?>
+            <label for="set_sniffing" style="display:inline;">Set Sniffing</label>
         </div>
 
         <label for="arc_id">ARC ID</label>

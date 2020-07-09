@@ -9,7 +9,6 @@ LTIME=`stat -c %Z /arc-data/.env`
 while true    
 do
    ATIME=`stat -c %Z /arc-data/.env`
-
    if [ "$ATIME" != "$LTIME" ]
    then
        echo "restarting arc container...."
