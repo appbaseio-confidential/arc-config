@@ -22,11 +22,11 @@
 </div>
 <div class="app-banner app-info">
     <small>
-        Your Arc URL: <a id="app-url"></a>. Use this URL along with the username / password you have configured as Basic Auth credentials to access your ElasticSearch instance.
+        Your Arc URL: <a id="app-url"></a>. Use this URL along with the username / password you have configured as Basic Auth credentials to access your Elasticsearch instance.
     </small>
     <br /> <br />
     <small>
-        Visit <a id="app-dashboard-url">Arc Dashboard.</a> It lets you configure additional security rules, view analytics and provides a better development experience for your ElasticSearch.
+        Visit <a id="app-dashboard-url">Arc Dashboard.</a> It lets you configure additional security rules, view analytics and provides a better development experience for your Elasticsearch.
     </small>
     <br/> <br />
     <small>

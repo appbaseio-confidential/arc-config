@@ -1,6 +1,6 @@
 #!/bin/sh
 
-touch /arc-data/.env && chmod 777 /arc-data/.env
+touch /arc-data/.env && chmod 777 -R /arc-data/
 
 sleep 5s
 ### Set initial time of file

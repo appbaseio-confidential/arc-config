@@ -25,11 +25,11 @@
         <small>This will reset your admin password</small>
         <input required class="pure-input-1" name="password" id="password" type="password" placeholder="Password" value="<?=$envs["PASSWORD"]?>"/>
 
-        <label for="cluster_url">ElasticSearch URL</label>
+        <label for="cluster_url">Elasticsearch URL</label>
         <small>URL format: https://your-search-domain.com:port. If your URL is protected by basic-auth use the format https://search-credentials@your-search-domain.com:port</small>
         <input required name="cluster_url" type="text" placeholder="Cluster URL" class="pure-input-1" value="<?=$envs["ES_CLUSTER_URL"]?>"/>
 
-        <small>This is helpful in multi node cluster setup. It helps in making request across multiple nodes</small>
+        <small> Set sniffing to enable automatic detection of other upstream Elasticsearch nodes. We don't recommend this setting if your Elasticsearch is already behind a load balancer.</small>
         <div style="margin-bottom:30px;">
             <?php if ($sniffing == "true") { ?>
                 <input name="set_sniffing" id="set_sniffing" type="checkbox" value="<?=$sniffing?>" checked="<?$sniffing?>"/>
