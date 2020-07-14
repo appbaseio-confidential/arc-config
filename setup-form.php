@@ -1,9 +1,9 @@
 <div class="app-card">
     <div class="logo-container">
-        <img src="./images/arc.svg" alt="logo"/>
+        <img src="https://appbase.io/static/svg/appbase-dark.svg" alt="logo"/>
     </div>
-    <h2 class="centered-text">Set Arc Credentials</h2>
-    <p class="centered-text">This will be the master credential to access the Arc service. You can change them later.</p>
+    <h2 class="centered-text">Set Appbase.io Credentials</h2>
+    <p class="centered-text">This will be the master credential to access the Appbase.io service. You can change them later.</p>
     <form method="post" action="post-setup.php" class="pure-form pure-form-stacked">
         <label for="username">Username</label>
         <input required class="pure-input-1" name="username" id="username" type="text" placeholder="Username" value="<?=$username?>" />

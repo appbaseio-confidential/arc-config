@@ -13,9 +13,9 @@
 <div class="sidebar-content">
 <div class="app-card">
     <div class="logo-container">
-        <img src="./images/arc.svg" alt="logo"/>
+        <img src="https://appbase.io/static/svg/appbase-dark.svg" alt="logo"/>
     </div>
-    <h2 class="centered-text">Configure your Arc Instance's Environment Variables</h2>
+    <h2 class="centered-text">Configure your Appbase.io Instance's Environment Variables</h2>
     <form method="post" action="post-env.php" class="pure-form pure-form-stacked">
         <label for="username">Master Username</label>
         <small>This will reset your admin username</small>
@@ -39,9 +39,9 @@
             <label for="set_sniffing" style="display:inline;">Set Sniffing</label>
         </div>
 
-        <label for="arc_id">ARC ID</label>
-        <small>You can obtain your ARC Id by visiting <a href="https://arc-dashboard.appbase.io/install" target="_blank">https://arc-dashboard.appbase.io/install</a></small>
-        <input required name="arc_id" type="text" placeholder="Arc ID" class="pure-input-1" value="<?=$envs["ARC_ID"]?>"/>
+        <label for="arc_id">Appbase.io ID</label>
+        <small>You can obtain your Appbase.io Id by visiting <a href="https://arc-dashboard.appbase.io/install" target="_blank">https://arc-dashboard.appbase.io/install</a></small>
+        <input required name="arc_id" type="text" placeholder="Appbase.io ID" class="pure-input-1" value="<?=$envs["ARC_ID"]?>"/>
 
         <label for="open_faas_gateway">OpenFaas Gateway</label>
         <small>You can obtain your OpenFaas Gateway by following docs <a href="https://docs.appbase.io/docs/search/Functions/hosting#5-configure-appbase" target="_blank">here</a></small>
