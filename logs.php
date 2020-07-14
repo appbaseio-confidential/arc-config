@@ -9,9 +9,9 @@
 <div class="sidebar-content">
 	<div class="app-card">
 		<div class="logo-container">
-			<img src="./images/arc.svg" alt="logo"/>
+			<img src="https://appbase.io/static/svg/appbase-dark.svg" alt="logo"/>
 		</div>
-		<h2 class="centered-text">Arc Logs</h2>
+		<h2 class="centered-text">Appbase.io Logs</h2>
 		<div class="icon">
 			<i onclick="reloadLogsContent()" style="font-size:24px" class="fa">&#xf021;</i>
 		</div>

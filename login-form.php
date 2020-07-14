@@ -1,8 +1,8 @@
 <div class="app-card">
     <div class="logo-container">
-        <img src="./images/arc.svg" alt="logo"/>
+        <img src="https://appbase.io/static/svg/appbase-dark.svg" alt="logo"/>
     </div>
-    <h2 class="centered-text">Login to configure Arc environment</h2>
+    <h2 class="centered-text">Login to configure Appbase.io environment</h2>
     <form method="post" action="post-login.php" class="pure-form pure-form-stacked">
         <label for="username">Username</label>
         <input required class="pure-input-1" name="username" id="username" type="text" placeholder="Username" />
@@ -22,15 +22,23 @@
 </div>
 <div class="app-banner app-info">
     <small>
+<<<<<<< HEAD
         Your Arc URL: <a id="app-url"></a>. Use this URL along with the username / password you have configured as Basic Auth credentials to access your ElasticSearch instance.
     </small>
     <br /> <br />
     <small>
         Visit <a id="app-dashboard-url">Arc Dashboard.</a> It lets you configure additional security rules, view analytics and provides a better development experience for your ElasticSearch.
+=======
+        Your Appbase.io URL: <a id="app-url"></a>. Use this URL along with the username / password you have configured as Basic Auth credentials to access your Elasticsearch instance.
+    </small>
+    <br /> <br />
+    <small>
+        Visit <a id="app-dashboard-url">Appbase.io Dashboard.</a> It lets you configure additional security rules, view analytics and provides a better development experience for your Elasticsearch.
+>>>>>>> 63a64a0... rename: arc -> appbase.io + change logos
     </small>
     <br/> <br />
     <small>
-    <b>Note:</b> Until you have configured TLS for Arc, you will need to allow loading of unsafe scripts (<a href="https://i.imgur.com/G4eLUsa.png">example</a>) from your browser to connect to the Arc instance. We strongly recommend you to configure this.
+    <b>Note:</b> Until you have configured TLS for Appbase.io, you will need to allow loading of unsafe scripts (<a href="https://i.imgur.com/G4eLUsa.png">example</a>) from your browser to connect to the Appbase.io instance. We strongly recommend you to configure this.
     </small>
 </div>
 <br />
