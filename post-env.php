@@ -9,7 +9,7 @@
         $data["ARC_ID"] = $_POST["arc_id"];
         $data["OPENFAAS_GATEWAY"] = $_POST["open_faas_gateway"];
         $data["OPENFAAS_KUBE_CONFIG"] = $_POST["open_faas_kube_config"];
-        $data["LOG_FILE_PATH"] = "/arc-data/es.json";
+        $data["LOG_FILE_PATH"] = "/appbase-data/es.json";
         if (isset($_POST["set_sniffing"])) {
             $data["SET_SNIFFING"] = "true";
         } else {

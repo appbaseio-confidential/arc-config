@@ -48,7 +48,7 @@ sudo apachectl -k restart
 
 Once the above steps are done, you will have your server running at <http://localhost:8080>
 
-## Configuring for arc-dashboard
+## Configuring for dashboard
 
 If you are running Cluster locally, then you need to configure the `credentials` and `Elasticsearch URL`.
 
@@ -62,4 +62,4 @@ Now go to <https://localhost> and enter your `Elasticsearch URL` and `ARC ID`. I
 - Elasticsearch URL: <https://search-arc-tester-f6qku5j7i5lnqogzbibj336mgy.us-east-1.es.amazonaws.com/>
 - ARC ID: dc06761f-e3a5-4361-8287-c6afdd3f927a
 
-Now head over to [arc-dashboard](https://arc-dashboard.appbase.io/?url=http://localhost:8080) and enter your credentials as configured in the above step. Default is `admin:admin`.
+Now head over to [dash](https://dash.appbase.io/?url=http://localhost:8080) and enter your credentials as configured in the above step. Default is `admin:admin`.

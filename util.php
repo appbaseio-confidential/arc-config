@@ -8,7 +8,7 @@
 	// $tdBitConf = "/etc/td-agent-bit/td-agent-bit.conf";
 
 	// logPath for docker
-	$tdBitConf = "/arc-data/td-agent-bit.conf";
+	$tdBitConf = "/appbase-data/td-agent-bit.conf";
 
 	// env file path for local
 	// $filePath = "env.sample";
@@ -17,7 +17,7 @@
 	// $filePath = "/etc/systemd/system/arc.env";
 	
 	// env file path for docker images
-	$filePath = "/arc-data/.env";
+	$filePath = "/appbase-data/.env";
 
 	function getEnvVars() {
 		global $filePath;

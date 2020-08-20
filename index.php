@@ -46,7 +46,7 @@
         }
         var appDashboardUrlElement = document.getElementById('app-dashboard-url');
         if (appDashboardUrlElement) {
-            appDashboardUrlElement.href = 'https://arc-dashboard.appbase.io?url='+window.origin;
+            appDashboardUrlElement.href = 'https://dash.appbase.io?url='+window.origin;
         }
     });
 </script>

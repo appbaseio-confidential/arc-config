@@ -1,9 +1,9 @@
-touch /arc-data/.logs && chmod 777 /arc-data/.logs
-> /arc-data/.logs
+touch /appbase-data/.logs && chmod 777 /appbase-data/.logs
+> /appbase-data/.logs
 
 while true
 do
     echo "logging content....."
-    docker logs arc >& /arc-data/.logs
+    docker logs arc >& /appbase-data/.logs
     sleep 5
 done

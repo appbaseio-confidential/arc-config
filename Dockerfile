@@ -14,7 +14,7 @@ WORKDIR /var/www
 
 # Copy existing application directory contents
 COPY . /var/www/html
-RUN mkdir /arc-data && chmod +x /var/www/html/*.sh && adduser -D -g 'www' www && chown -R www:www /var/www/ && chmod -R 777 /arc-data && chown -R www:www /arc-data && touch /arc-data/es.json && chmod -R 777 /arc-data/es.json
+RUN mkdir /appbase-data && chmod +x /var/www/html/*.sh && adduser -D -g 'www' www && chown -R www:www /var/www/ && chmod -R 777 /appbase-data && chown -R www:www /appbase-data && touch /appbase-data/es.json && chmod -R 777 /appbase-data/es.json
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["sh", "-c", "/var/www/html/starter.sh"]

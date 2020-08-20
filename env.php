@@ -40,7 +40,7 @@
         </div>
 
         <label for="arc_id">Appbase.io ID</label>
-        <small>You can obtain your Appbase.io Id by visiting <a href="https://arc-dashboard.appbase.io/install" target="_blank">https://arc-dashboard.appbase.io/install</a></small>
+        <small>You can obtain your Appbase.io Id by visiting <a href="https://dash.appbase.io/install" target="_blank">https://dash.appbase.io/install</a></small>
         <input required name="arc_id" type="text" placeholder="Appbase.io ID" class="pure-input-1" value="<?=$envs["ARC_ID"]?>"/>
 
         <label for="open_faas_gateway">OpenFaas Gateway</label>
