@@ -2,7 +2,7 @@
 
 ## Install Apache
 
-https://getgrav.org/blog/macos-catalina-apache-multiple-php-versions
+<https://getgrav.org/blog/macos-catalina-apache-multiple-php-versions>
 
 Follow the below sections from the above blog:
 
@@ -18,7 +18,7 @@ You can create `env.sample` at the root of your project with the following conte
 USERNAME=admin
 PASSWORD=admin
 ES_CLUSTER_URL=https://search-arc-tester-f6qku5j7i5lnqogzbibj336mgy.us-east-1.es.amazonaws.com/
-ARC_ID=dc06761f-e3a5-4361-8287-c6afdd3f927a
+APPBASE_ID=dc06761f-e3a5-4361-8287-c6afdd3f927a
 ```
 
 Now in `util.php` change the `$filePath` to `./env.sample`.
@@ -46,7 +46,7 @@ brew services start httpd
 sudo apachectl -k restart
 ```
 
-Once the above steps are done, you will have your server running at http://localhost:8080
+Once the above steps are done, you will have your server running at <http://localhost:8080>
 
 ## Configuring for arc-dashboard
 
@@ -57,9 +57,9 @@ First make sure to allow `insecure-host` in browser:
 - Chrome - chrome://flags/#allow-insecure-localhost
 - Brave - brave://flags/#allow-insecure-localhost
 
-Now go to https://localhost and enter your `Elasticsearch URL` and `ARC ID`. If you don't have one you can try this:
+Now go to <https://localhost> and enter your `Elasticsearch URL` and `ARC ID`. If you don't have one you can try this:
 
-- Elasticsearch URL: https://search-arc-tester-f6qku5j7i5lnqogzbibj336mgy.us-east-1.es.amazonaws.com/
+- Elasticsearch URL: <https://search-arc-tester-f6qku5j7i5lnqogzbibj336mgy.us-east-1.es.amazonaws.com/>
 - ARC ID: dc06761f-e3a5-4361-8287-c6afdd3f927a
 
 Now head over to [arc-dashboard](https://arc-dashboard.appbase.io/?url=http://localhost:8080) and enter your credentials as configured in the above step. Default is `admin:admin`.
