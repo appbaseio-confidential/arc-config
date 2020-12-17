@@ -1,6 +1,6 @@
 <div class="app-card">
     <div class="logo-container">
-        <img src="https://appbase.io/static/svg/appbase-dark.svg" alt="logo"/>
+        <img src="./images/appbase-logo.svg" alt="logo"/>
     </div>
     <h2 class="centered-text">Set Appbase.io Credentials</h2>
     <p class="centered-text">This will be the master credential to access the Appbase.io service. You can change them later.</p>

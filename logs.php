@@ -9,7 +9,7 @@
 <div class="sidebar-content">
 	<div class="app-card">
 		<div class="logo-container">
-			<img src="https://appbase.io/static/svg/appbase-dark.svg" alt="logo"/>
+			<img src="./images/appbase-logo.svg" alt="logo"/>
 		</div>
 		<h2 class="centered-text">Appbase.io Logs</h2>
 		<div class="icon">

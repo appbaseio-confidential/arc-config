@@ -13,7 +13,7 @@
 <div class="sidebar-content">
 <div class="app-card">
     <div class="logo-container">
-        <img src="https://appbase.io/static/svg/appbase-dark.svg" alt="logo"/>
+        <img src="./images/appbase-logo.svg" alt="logo"/>
     </div>
     <h2 class="centered-text">Configure your Appbase.io Instance's Environment Variables</h2>
     <form method="post" action="post-env.php" class="pure-form pure-form-stacked">

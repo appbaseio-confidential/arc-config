@@ -1,6 +1,6 @@
 <div class="app-card">
     <div class="logo-container">
-        <img src="https://appbase.io/static/svg/appbase-dark.svg" alt="logo"/>
+        <img src="./images/appbase-logo.svg" alt="logo"/>
     </div>
     <h2 class="centered-text">Login to configure Appbase.io environment</h2>
     <form method="post" action="post-login.php" class="pure-form pure-form-stacked">
