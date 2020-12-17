@@ -11,8 +11,8 @@ do
    ATIME=`stat -c %Z /appbase-data/.env`
    if [ "$ATIME" != "$LTIME" ]
    then
-       echo "restarting arc container...."
-       docker restart arc
+       echo "restarting appbase container...."
+       docker restart appbase
        LTIME=$ATIME
    fi
    sleep 5

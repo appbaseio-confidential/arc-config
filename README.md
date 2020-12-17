@@ -57,9 +57,9 @@ First make sure to allow `insecure-host` in browser:
 - Chrome - chrome://flags/#allow-insecure-localhost
 - Brave - brave://flags/#allow-insecure-localhost
 
-Now go to <https://localhost> and enter your `Elasticsearch URL` and `ARC ID`. If you don't have one you can try this:
+Now go to <https://localhost> and enter your `Elasticsearch URL` and `APPBASE_ID`. If you don't have one you can try this:
 
 - Elasticsearch URL: <https://search-arc-tester-f6qku5j7i5lnqogzbibj336mgy.us-east-1.es.amazonaws.com/>
-- ARC ID: dc06761f-e3a5-4361-8287-c6afdd3f927a
+- APPBASE_ID: dc06761f-e3a5-4361-8287-c6afdd3f927a
 
 Now head over to [dash](https://dash.appbase.io/?url=http://localhost:8080) and enter your credentials as configured in the above step. Default is `admin:admin`.
