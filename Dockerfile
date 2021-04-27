@@ -1,4 +1,4 @@
-FROM php:7.2-fpm-alpine3.9
+FROM php:7.4.16-fpm-alpine3.13
 
 
 # Install dependencies
