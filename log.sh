@@ -1,9 +1,9 @@
-touch /appbase-data/.logs && chmod 777 /appbase-data/.logs
-> /appbase-data/.logs
+touch /reactivesearch-data/.logs && chmod 777 /reactivesearch-data/.logs
+> /reactivesearch-data/.logs
 
 while true
 do
     echo "logging content....."
-    docker logs appbase >& /appbase-data/.logs
+    docker logs rs-api >& /reactivesearch-data/.logs
     sleep 5
 done

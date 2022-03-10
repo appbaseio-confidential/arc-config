@@ -1,18 +1,18 @@
 #!/bin/sh
 
-touch /appbase-data/.env && chmod 777 -R /appbase-data/
+touch /reactivesearch-data/.env && chmod 777 -R /reactivesearch-data/
 
 sleep 5s
 ### Set initial time of file
-LTIME=`stat -c %Z /appbase-data/.env`
+LTIME=`stat -c %Z /reactivesearch-data/.env`
 
 while true    
 do
-   ATIME=`stat -c %Z /appbase-data/.env`
+   ATIME=`stat -c %Z /reactivesearch-data/.env`
    if [ "$ATIME" != "$LTIME" ]
    then
-       echo "restarting appbase container...."
-       docker restart appbase
+       echo "restarting reactivesearch-api container...."
+       docker restart reactivesearch-api
        LTIME=$ATIME
    fi
    sleep 5

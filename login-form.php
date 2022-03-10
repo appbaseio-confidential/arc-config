@@ -1,8 +1,8 @@
 <div class="app-card">
     <div class="logo-container">
-        <img src="./images/appbase-logo.svg" alt="logo"/>
+        <img src="./images/reactivesearch-logo.png" alt="logo"/>
     </div>
-    <h2 class="centered-text">Login to configure Appbase.io environment</h2>
+    <h2 class="centered-text">Login to configure the ReactiveSearch API server environment</h2>
     <form method="post" action="post-login.php" class="pure-form pure-form-stacked">
         <label for="username">Username</label>
         <input required class="pure-input-1" name="username" id="username" type="text" placeholder="Username" />
@@ -22,7 +22,7 @@
 </div>
 <div class="app-banner app-info">
     <small>
-        Your Appbase.io URL: <a id="app-url"></a>. Use this URL along with the username / password you have configured as Basic Auth credentials to access your Elasticsearch instance.
+        Your Appbase.io (ReactiveSearch API) URL: <a id="app-url"></a>. Use this URL along with the username / password you have configured as Basic Auth credentials to access your Elasticsearch instance.
     </small>
     <br /> <br />
     <small>
@@ -30,7 +30,7 @@
     </small>
     <br/> <br />
     <small>
-    <b>Note:</b> Until you have configured TLS for Appbase.io, you will need to allow loading of unsafe scripts (<a href="https://i.imgur.com/G4eLUsa.png">example</a>) from your browser to connect to the Appbase.io instance. We strongly recommend you to configure this.
+    <b>Note:</b> Until you have configured TLS for Appbase.io, you will need to allow loading of unsafe scripts (<a href="https://i.imgur.com/G4eLUsa.png">example</a>) from your browser to connect to the ReactiveSearch API server instance. We strongly recommend you to configure this.
     </small>
 </div>
 <br />
