@@ -11,8 +11,8 @@ do
    ATIME=`stat -c %Z /reactivesearch-data/.env`
    if [ "$ATIME" != "$LTIME" ]
    then
-       echo "restarting reactivesearch-api container...."
-       docker restart reactivesearch-api
+       echo "restarting rs-api container...."
+       docker restart rs-api
        LTIME=$ATIME
    fi
    sleep 5
