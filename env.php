@@ -13,7 +13,7 @@
 <div class="sidebar-content">
 <div class="app-card">
     <div class="logo-container">
-        <img src="./images/reactivesearch-logo.png" width="150px" alt="logo"/>
+        <img src="./images/reactivesearch-logo.png" width="150" alt="logo"/>
     </div>
     <h2 class="centered-text">Configure your Reactivesearch API server instance's environment variables</h2>
     <form method="post" action="post-env.php" class="pure-form pure-form-stacked">

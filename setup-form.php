@@ -1,6 +1,6 @@
 <div class="app-card">
     <div class="logo-container">
-        <img src="./images/reactivesearch-logo.png" width="150px" alt="logo"/>
+        <img src="./images/reactivesearch-logo.png" width="150" alt="logo"/>
     </div>
     <h2 class="centered-text">Set Appbase.io Credentials</h2>
     <p class="centered-text">This should be the master credentials to access the Appbase.io service. You can change them later.</p>

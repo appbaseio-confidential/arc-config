@@ -6,7 +6,7 @@
         $data["USERNAME"] = $_POST["username"];
         $data["PASSWORD"] = $_POST["password"];
         $data["ES_CLUSTER_URL"] = $_POST["cluster_url"];
-        $data["ARC_ID"] = $_POST["arc_id"];
+        $data["APPBASE_ID"] = $_POST["appbase_id"];
         $data["LOG_FILE_PATH"] = "/reactivesearch-data/es.json";
         $data["PIPELINE_LOG_FILE_PATH"] = "/reactivesearch-data/pipeline.json";
         if (isset($_POST["set_sniffing"])) {
@@ -14,7 +14,7 @@
         } else {
             $data["SET_SNIFFING"] = "false";
         }
-        if (isset($_POST["username"]) && isset($_POST["password"]) && isset($_POST["cluster_url"]) && isset($_POST["arc_id"]) && !empty($_POST["username"]) && !empty($_POST["username"]) && !empty($_POST["cluster_url"]) && !empty($_POST["arc_id"])) {
+        if (isset($_POST["username"]) && isset($_POST["password"]) && isset($_POST["cluster_url"]) && isset($_POST["appbase_id"]) && !empty($_POST["username"]) && !empty($_POST["username"]) && !empty($_POST["cluster_url"]) && !empty($_POST["appbase_id"])) {
             upsertEnvVars($data);
             upsertLogFile($data);
             logout("?success=Data updated successfully");
