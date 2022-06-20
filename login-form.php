@@ -1,6 +1,6 @@
 <div class="app-card">
     <div class="logo-container">
-        <img src="./images/reactivesearch-logo.png" alt="logo"/>
+        <img src="./images/reactivesearch-logo.png" width="150px" alt="logo"/>
     </div>
     <h2 class="centered-text">Login to configure the ReactiveSearch API server environment</h2>
     <form method="post" action="post-login.php" class="pure-form pure-form-stacked">
