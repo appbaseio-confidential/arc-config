@@ -13,9 +13,9 @@
 <div class="sidebar-content">
 <div class="app-card">
     <div class="logo-container">
-        <img src="./images/appbase-logo.svg" alt="logo"/>
+        <img src="./images/reactivesearch-logo.png" alt="logo"/>
     </div>
-    <h2 class="centered-text">Configure your Appbase.io Instance's Environment Variables</h2>
+    <h2 class="centered-text">Configure Your ReactiveSearch AMI Instance's Environment Variables</h2>
     <form method="post" action="post-env.php" class="pure-form pure-form-stacked">
         <label for="username">Master Username</label>
         <small>This will reset your admin username</small>
@@ -39,17 +39,9 @@
             <label for="set_sniffing" style="display:inline;">Set Sniffing</label>
         </div>
 
-        <label for="arc_id">Appbase.io ID</label>
-        <small>You can obtain your Appbase.io Id by visiting <a href="https://arc-dashboard.appbase.io/install" target="_blank">https://arc-dashboard.appbase.io/install</a></small>
-        <input required name="arc_id" type="text" placeholder="Appbase.io ID" class="pure-input-1" value="<?=$envs["ARC_ID"]?>"/>
-
-        <label for="open_faas_gateway">OpenFaas Gateway</label>
-        <small>You can obtain your OpenFaas Gateway by following docs <a href="https://docs.appbase.io/docs/search/Functions/hosting#5-configure-appbase" target="_blank">here</a></small>
-        <input name="open_faas_gateway" type="text" placeholder="OpenFaas Gateway URL" class="pure-input-1" value="<?=$envs["OPENFAAS_GATEWAY"]?>"/>
-
-        <label for="open_faas_kube_config">Kube Config Path</label>
-        <small>Enter KubeConfig file path where OpenFaas is deployed, for more information you can read docs <a href="https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/" target="_blank">here</a></small>
-        <input name="open_faas_kube_config" type="text" placeholder="KubeConfig file path" class="pure-input-1" value="<?=$envs["OPENFAAS_KUBE_CONFIG"]?>"/>
+        <label for="appbase_id">Subscription Id, aka APPBASE_ID</label>
+        <small>You can obtain a unique APPBASE_ID key by visiting <a href="https://dash.reactivesearch.io/install" target="_blank">https://dash.reactivesearch.io/install</a></small>
+        <input required name="appbase_id" type="text" placeholder="APPBASE_ID key" class="pure-input-1" value="<?=$envs["APPBASE_ID"]?>"/>
 
         <button class="pure-button pure-button-primary">Save</button>
     </form>
