@@ -62,4 +62,4 @@ Now go to <https://localhost> and enter your `ElasticSearch URL` and `APPBASE_ID
 - ElasticSearch URL: <https://search-arc-tester-f6qku5j7i5lnqogzbibj336mgy.us-east-1.es.amazonaws.com/>
 - APPBASE_ID: dc06761f-e3a5-4361-8287-c6afdd3f927a
 
-Now head over to [arc-dashboard](https://arc-dashboard.appbase.io/?url=http://localhost:8080) and enter your credentials as configured in the above step. Default is `admin:admin`.
+Now head over to [ReactiveSearch Dashboard](https://dash.reactivesearch.io/?url=http://localhost:8080) and enter your credentials as configured in the above step. Default is `admin:admin`.
