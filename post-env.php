@@ -7,7 +7,6 @@
         $data["PASSWORD"] = $_POST["password"];
         $data["ES_CLUSTER_URL"] = $_POST["cluster_url"];
         $data["APPBASE_ID"] = $_POST["appbase_id"];
-        $data["ZINC_CLUSTER_URL"] = "http://reactivesearch:zincf0rami@localhost:4080";
         if (isset($_POST["set_sniffing"])) {
             $data["SET_SNIFFING"] = "true";
         } else {
