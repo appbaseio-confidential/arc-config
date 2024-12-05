@@ -9,28 +9,52 @@
 
 	// env file path for local
 	// $filePath = "env.sample";
-	
+
 	// env file path for AMI
 	$filePath = "/etc/systemd/system/arc.env";
-	
+
 	// env file path for docker images
 	// $filePath = "/arc-data/.env";
 
-	function getEnvVars() {
-		global $filePath;
-		
-		$file = fopen($filePath, "r");
-		$fileLines = array();
-		while(!feof($file))  {
-			$result = fgets($file);
-			if (!empty($result)) {
-				$splitResult = explode("=", $result);
-				$fileLines[$splitResult[0]] = trim($splitResult[1]);
-			}
-		}
-		fclose($file);
-		return $fileLines;
-	}
+    function getEnvVars() {
+        global $filePath;
+
+        $file = fopen($filePath, "r");
+        if (!$file) {
+            error_log("Unable to open file: $filePath");
+            return [];
+        }
+
+        $fileLines = array();
+        while (($line = fgets($file)) !== false) {
+            $line = trim($line);
+
+            // Skip empty lines and comments
+            if ($line === '' || strpos($line, '#') === 0) {
+                continue;
+            }
+
+            // Ensure the line contains an '=' character
+            if (strpos($line, '=') === false) {
+                error_log("Invalid line in env file: $line");
+                continue;
+            }
+
+            list($key, $value) = explode('=', $line, 2);
+            $key = trim($key);
+            $value = trim($value);
+
+            // Handle values enclosed in quotes
+            if (preg_match('/^"(.*)"$/', $value, $matches)) {
+                $value = $matches[1];
+            }
+
+            $fileLines[$key] = $value;
+        }
+        fclose($file);
+        error_log("Environment variables loaded: " . print_r($fileLines, true));
+        return $fileLines;
+    }
 
 	function upsertEnvVars($data) {
 		$finalData = getEnvVars();
@@ -60,18 +84,18 @@
 		$hostSplit = explode("://", $url);
 		if (count($hostSplit) === 2) {
 			$host = $hostSplit[1];
-			
+
 			if ($hostSplit[0] == "http") {
 				$tls = "Off";
 				$port = "80";
 			}
-			
+
 		} else {
 			$host = $hostSplit[0];
 			$tls = "Off";
 			$port = "80";
 		}
-		
+
 		$authSplit = explode( "@", $host);
 		if (count($authSplit) === 2) {
 			$credentialSplit = explode(":", $authSplit[0]);
@@ -79,13 +103,13 @@
 			$password = $credentialSplit[1];
 			$host = $authSplit[1];
 		}
-		
+
 		$portSplit = explode(":", $host);
 		if (count($portSplit) === 2) {
 			$port = $portSplit[1];
 			$host = $portSplit[0];
 		}
-		
+
 		return [
 			$host,
 			$port,
@@ -122,7 +146,7 @@
 			} else {
 				$contents = str_replace('HTTP_Passwd __ES_PASSWORD__', '', $contents);
 			}
-			
+
 			$res = file_put_contents($tdBitConf, trim($contents));
 		}
 	}

@@ -19,6 +19,10 @@
         <br />
         Your initial username is <b>ec2-user</b> and your initial password is same as your instance id (<a href="https://i.imgur.com/uWSNOgz.png" target="_blank">example</a>).
     </small>
+    <br/><br/>
+    <small>
+        Or you can configure ES_CLUSTER_URL and APPBASE_ID by setting them in /etc/systemd/system/arc.env file.
+    </small>
 </div>
 <div class="app-banner app-info">
     <small>
